@@ -1,24 +1,16 @@
-# README
+# Aplicativo espelho do Ifoods
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Esta aplicação está sendo feita em Ruby on Rails 6.
+Desenvolvida para estudo de backend, com testes rspec e com notificações atraves da gem sidekiq no servidor redis.
 
-Things you may want to cover:
 
-* Ruby version
+git clone https://github.com/rodrigovenancioverissimo/aluguel-de-automoveis.git
+cd aluguel-de-automoveis/
+bundle install
+rails db:create
+rails db:migrate
+yarn install
 
-* System dependencies
+Banco de dados
+O sistema foi testado no banco de dados PostgreSQL
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
