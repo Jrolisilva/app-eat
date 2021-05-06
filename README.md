@@ -5,11 +5,10 @@ Desenvolvida para estudo de backend, com testes rspec e com notificações atrav
 
 
 git clone https://github.com/Jrolisilva/app-eat
-cd aluguel-de-automoveis/
+cd app-eat/
 bundle install
 rails db:create
 rails db:migrate
-yarn install
 
 Banco de dados
 O sistema foi testado no banco de dados PostgreSQL
