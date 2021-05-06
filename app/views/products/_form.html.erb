@@ -1,17 +1,30 @@
-<%= form_with(model: product, local: true) do |form|%>
+<%= form_with(model: restaurant, local: true) do |form|%>
+    <% if restaurant.errors.any? %>
+        <div id="error_explanation">
+            <h2><%= pluralize(restaurant.errors.count, "error")%>prohibited this restaurant from being saved:</h2>
+
+            <ul>
+                <% restaurant.error.full_messages.each do |message|%>
+                    <li><%= message %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+
+
     <div class="field">
         <%= form.label :name %>
         <%= form.text_field :name %>
     </div>
 
     <div class="field">
-        <%= form.label :value %>
-        <%= form.text_field :value %>
+        <%= form.label :address %>
+        <%= form.text_area :address %>
     </div>
 
     <div class="field">
-        <%= form.label :restaurant %>
-        <%= form.collection_select(:restaurant_id, Restaurant.order(:name), :id, :name, include_blank: true) %>
+        <%= form.label :user %>
+        <%= form.collection_select(:user_id, User.restaurant, :id, :email, include_blank: true) %>
     </div>
 
     <div class="actions">
